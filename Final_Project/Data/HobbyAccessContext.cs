@@ -11,6 +11,7 @@ namespace Final_Project.Data
     {
         public HobbyAccessContext(DbContextOptions<HobbyAccessContext> options) : base(options) { }
 
+        //Pratik Chaudhari
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Hobby>().HasData(
@@ -18,6 +19,7 @@ namespace Final_Project.Data
                 );
         }
 
+        //Pratik Chaudhari
         public DbSet<Hobby> HobbyRecords { get; set; }
     }
 }

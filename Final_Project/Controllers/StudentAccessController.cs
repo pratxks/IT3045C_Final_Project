@@ -15,27 +15,32 @@ namespace Final_Project.Controllers
 
     public class StudentAccessController : ControllerBase
     {
+        //Pratik Chaudhari
         private readonly ILogger<StudentAccessController> _logger;
         private readonly IStudentAccessInterface _studentAccessInterface;
 
+        //Pratik Chaudhari
         public StudentAccessController(ILogger<StudentAccessController> logger, IStudentAccessInterface studentAccessInterface)
         {
             _logger = logger;
             _studentAccessInterface = studentAccessInterface;
         }
 
+        //Pratik Chaudhari
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_studentAccessInterface.GetAllStudents());
         }
 
+        //Pratik Chaudhari
         [HttpGet("id")]
         public IActionResult Get(int id)
         {
             return Ok(_studentAccessInterface.GetStudentByID(id));
         }
 
+        //Pratik Chaudhari
         [HttpDelete]
         public IActionResult Delete(int id)
         {
@@ -53,6 +58,7 @@ namespace Final_Project.Controllers
             return Ok();
         }
 
+        //Pratik Chaudhari
         [HttpPut]
         public IActionResult Put(Student studentToUpdate)
         {
@@ -71,6 +77,7 @@ namespace Final_Project.Controllers
 
         }
 
+        //Pratik Chaudhari
         [HttpPost]
         public IActionResult Post(Student newStudent)
         {

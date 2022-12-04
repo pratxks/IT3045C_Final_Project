@@ -26,7 +26,8 @@ namespace Final_Project
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        //This method gets called by the runtime. Use this method to add services to the container.
+        //Pratik Chaudhari
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
@@ -50,6 +51,7 @@ namespace Final_Project
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        //Pratik Chaudhari
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, 
             StudentAccessContext studentAccessContext, HobbyAccessContext hobbyAccessContext,
             SportAccessContext sportAccessContext, FoodAccessContext foodAccessContext)

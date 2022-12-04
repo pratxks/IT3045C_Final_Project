@@ -12,21 +12,25 @@ namespace Final_Project.Services
     {
         private FoodAccessContext _foodAccessContext;
 
+        //Pratik Chaudhari
         public FoodAccessService(FoodAccessContext foodAccessContext)
         {
             _foodAccessContext = foodAccessContext;
         }
 
+        //Pratik Chaudhari
         public List<Food> GetAllFoodRecords()
         {
             return _foodAccessContext.FoodRecords.ToList();
         }
 
+        //Pratik Chaudhari
         private Food FoodByID(int id)
         {
             return _foodAccessContext.FoodRecords.Where(x => x.Id.Equals(id)).FirstOrDefault();
         }
 
+        //Pratik Chaudhari
         public List<Food> GetFoodRecordByID(int id)
         {
             List<Food> foodList = _foodAccessContext.FoodRecords.ToList();
@@ -43,6 +47,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? RemoveFoodRecordById(int id)
         {
             var foodRecToDelete = this.FoodByID(id);
@@ -60,6 +65,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? UpdateFoodRecord(Food existingFoodRecord)
         {
             var foodRecordToUpdate = this.FoodByID(existingFoodRecord.Id);
@@ -84,6 +90,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? AddFoodRecord(Food newFoodRecord)
         {
             var foodRecordExist = _foodAccessContext.FoodRecords.Where(x => x.fullName.Equals(newFoodRecord.fullName)).FirstOrDefault();

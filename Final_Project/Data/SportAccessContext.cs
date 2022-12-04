@@ -11,6 +11,7 @@ namespace Final_Project.Data
     {
         public SportAccessContext(DbContextOptions<SportAccessContext> options) : base(options) { }
 
+        //Pratik Chaudhari
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Sport>().HasData(
@@ -18,6 +19,7 @@ namespace Final_Project.Data
                 );
         }
 
+        //Pratik Chaudhari
         public DbSet<Sport> SportRecords { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Final_Project.Migrations.HobbyAccess
 {
+    //AutoAdded by Add-Migration command - Pratik Chaudhari
     [DbContext(typeof(HobbyAccessContext))]
     partial class HobbyAccessContextModelSnapshot : ModelSnapshot
     {

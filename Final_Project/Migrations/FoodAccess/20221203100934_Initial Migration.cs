@@ -2,6 +2,7 @@
 
 namespace Final_Project.Migrations.FoodAccess
 {
+    //AutoAdded by Add-Migration command - Pratik Chaudhari
     public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

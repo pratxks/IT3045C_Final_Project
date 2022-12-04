@@ -12,20 +12,25 @@ namespace Final_Project.Services
     {
         private SportAccessContext _sportAccessContext;
 
+        //Pratik Chaudhari
         public SportAccessService(SportAccessContext sportAccessContext)
         {
             _sportAccessContext = sportAccessContext;
         }
 
+        //Pratik Chaudhari
         public List<Sport> GetAllSportRecords()
         {
             return _sportAccessContext.SportRecords.ToList();
         }
+
+        //Pratik Chaudhari
         private Sport SportByID(int id)
         {
             return _sportAccessContext.SportRecords.Where(x => x.Id.Equals(id)).FirstOrDefault();
         }
 
+        //Pratik Chaudhari
         public List<Sport> GetSportRecordByID(int id)
         {
             List<Sport> sportList = _sportAccessContext.SportRecords.ToList();
@@ -42,6 +47,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? RemoveSportRecordById(int id)
         {
             var sportRecToDelete = this.SportByID(id);
@@ -59,6 +65,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? UpdateSportRecord(Sport existingSportRecord)
         {
             var sportRecordToUpdate = this.SportByID(existingSportRecord.Id);
@@ -83,6 +90,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? AddSportRecord(Sport newSportRecord)
         {
             var sportRecordExist = _sportAccessContext.SportRecords.Where(x => x.fullName.Equals(newSportRecord.fullName)).FirstOrDefault();

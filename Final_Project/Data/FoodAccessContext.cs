@@ -11,6 +11,7 @@ namespace Final_Project.Data
     {
         public FoodAccessContext(DbContextOptions<FoodAccessContext> options) : base(options) { }
 
+        //Pratik Chaudhari
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Food>().HasData(
@@ -18,6 +19,7 @@ namespace Final_Project.Data
                 );
         }
 
+        //Pratik Chaudhari
         public DbSet<Food> FoodRecords { get; set; }
     }
 }

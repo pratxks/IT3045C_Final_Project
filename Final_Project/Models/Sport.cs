@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Final_Project.Models
 {
+    //Pratik Chaudhari
     public class Sport
     {
         public int Id { get; set; }

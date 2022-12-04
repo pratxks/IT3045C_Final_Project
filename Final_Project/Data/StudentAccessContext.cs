@@ -11,6 +11,7 @@ namespace Final_Project.Data
     {
         public StudentAccessContext(DbContextOptions<StudentAccessContext> options) : base(options) { }
 
+        //Pratik Chaudhari
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Student>().HasData(
@@ -18,6 +19,7 @@ namespace Final_Project.Data
                 );
         }
 
+        //Pratik Chaudhari
         public DbSet<Student> Student { get; set; }
     }
 }

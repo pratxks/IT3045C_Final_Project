@@ -10,32 +10,38 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Controllers
 {
+    //Pratik Chaudhari
     [ApiController]
     [Route("[controller]")]
 
     public class FoodAccessController : ControllerBase
     {
+        //Pratik Chaudhari
         private readonly ILogger<FoodAccessController> _logger;
         private readonly IFoodAccessInterface _foodAccessInterface;
 
+        //Pratik Chaudhari
         public FoodAccessController(ILogger<FoodAccessController> logger, IFoodAccessInterface foodAccessInterface)
         {
             _logger = logger;
             _foodAccessInterface = foodAccessInterface;
         }
 
+        //Pratik Chaudhari
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_foodAccessInterface.GetAllFoodRecords());
         }
 
+        //Pratik Chaudhari
         [HttpGet("id")]
         public IActionResult Get(int id)
         {
             return Ok(_foodAccessInterface.GetFoodRecordByID(id));
         }
 
+        //Pratik Chaudhari
         [HttpDelete]
         public IActionResult Delete(int id)
         {
@@ -53,6 +59,7 @@ namespace Final_Project.Controllers
             return Ok();
         }
 
+        //Pratik Chaudhari
         [HttpPut]
         public IActionResult Put(Food foodRecordToUpdate)
         {
@@ -70,6 +77,7 @@ namespace Final_Project.Controllers
             return Ok();
         }
 
+        //Pratik Chaudhari
         [HttpPost]
         public IActionResult Post(Food newFoodRecord)
         {

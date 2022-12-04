@@ -12,21 +12,25 @@ namespace Final_Project.Services
     {
         private StudentAccessContext _studentAccessContext;
 
+        //Pratik Chaudhari
         public StudentAccessService(StudentAccessContext studentAccessContext)
         {
             _studentAccessContext = studentAccessContext;
         }
 
+        //Pratik Chaudhari
         public List<Student> GetAllStudents()
         {
             return _studentAccessContext.Student.ToList();
         }
 
+        //Pratik Chaudhari
         private Student StudentByID(int id)
         {
             return _studentAccessContext.Student.Where(x => x.Id.Equals(id)).FirstOrDefault();
         }
 
+        //Pratik Chaudhari
         public List<Student> GetStudentByID(int id)
         {
             List<Student> studentList = _studentAccessContext.Student.ToList();
@@ -43,6 +47,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? RemoveStudentById(int id)
         {
             var studentToDelete = this.StudentByID(id);
@@ -60,6 +65,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? UpdateStudent(Student existingStudent)
         {
             var studentToUpdate = this.StudentByID(existingStudent.Id);
@@ -84,6 +90,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? AddStudent(Student newStudent)
         {
             var studentExist = _studentAccessContext.Student.Where(x => x.fullName.Equals(newStudent.fullName) && x.birthDate.Equals(newStudent.birthDate)).FirstOrDefault();

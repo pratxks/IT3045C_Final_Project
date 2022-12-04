@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Final_Project.Migrations.FoodAccess
 {
+    //AutoAdded by Add-Migration command - Pratik Chaudhari
     [DbContext(typeof(FoodAccessContext))]
     partial class FoodAccessContextModelSnapshot : ModelSnapshot
     {

@@ -12,20 +12,25 @@ namespace Final_Project.Services
     {
         private HobbyAccessContext _hobbyAccessContext;
 
+        //Pratik Chaudhari
         public HobbyAccessService(HobbyAccessContext hobbyAccessContext)
         {
             _hobbyAccessContext = hobbyAccessContext;
         }
 
+        //Pratik Chaudhari
         public List<Hobby> GetAllHobbyRecords()
         {
             return _hobbyAccessContext.HobbyRecords.ToList();
         }
+
+        //Pratik Chaudhari
         private Hobby HobbyByID(int id)
         {
             return _hobbyAccessContext.HobbyRecords.Where(x => x.Id.Equals(id)).FirstOrDefault();
         }
 
+        //Pratik Chaudhari
         public List<Hobby> GetHobbyRecordByID(int id)
         {
             List<Hobby> hobbyList = _hobbyAccessContext.HobbyRecords.ToList();
@@ -42,6 +47,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? RemoveHobbyRecordById(int id)
         {
             var hobbyToDelete = this.HobbyByID(id);
@@ -59,6 +65,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? UpdateHobbyRecord(Hobby existingHobbyRecord)
         {
             var hobbyRecordToUpdate = this.HobbyByID(existingHobbyRecord.Id);
@@ -83,6 +90,7 @@ namespace Final_Project.Services
             }
         }
 
+        //Pratik Chaudhari
         public int? AddHobbyRecord(Hobby newHobbyRecord)
         {
             var hobbyExist = _hobbyAccessContext.HobbyRecords.Where(x => x.fullName.Equals(newHobbyRecord.fullName)).FirstOrDefault();

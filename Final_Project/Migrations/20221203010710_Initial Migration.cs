@@ -2,6 +2,7 @@
 
 namespace Final_Project.Migrations
 {
+    //AutoAdded by Add-Migration command - Pratik Chaudhari
     public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

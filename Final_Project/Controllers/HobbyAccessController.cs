@@ -10,32 +10,38 @@ using System.Threading.Tasks;
 
 namespace Final_Project.Controllers
 {
+    //Pratik Chaudhari
     [ApiController]
     [Route("[controller]")]
 
     public class HobbyAccessController : ControllerBase
     {
+        //Pratik Chaudhari
         private readonly ILogger<HobbyAccessController> _logger;
         private readonly IHobbyAccessInterface _hobbyAccessInterface;
 
+        //Pratik Chaudhari
         public HobbyAccessController(ILogger<HobbyAccessController> logger, IHobbyAccessInterface hobbyAccessInterface)
         {
             _logger = logger;
             _hobbyAccessInterface = hobbyAccessInterface;
         }
 
+        //Pratik Chaudhari
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_hobbyAccessInterface.GetAllHobbyRecords());
         }
 
+        //Pratik Chaudhari
         [HttpGet("id")]
         public IActionResult Get(int id)
         {
             return Ok(_hobbyAccessInterface.GetHobbyRecordByID(id));
         }
 
+        //Pratik Chaudhari
         [HttpDelete]
         public IActionResult Delete(int id)
         {
@@ -53,6 +59,7 @@ namespace Final_Project.Controllers
             return Ok();
         }
 
+        //Pratik Chaudhari
         [HttpPut]
         public IActionResult Put(Hobby hobbyRecordToUpdate)
         {
@@ -70,6 +77,7 @@ namespace Final_Project.Controllers
             return Ok();
         }
 
+        //Pratik Chaudhari
         [HttpPost]
         public IActionResult Post(Hobby newHobbyRecord)
         {

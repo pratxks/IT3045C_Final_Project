@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Final_Project.Migrations.SportAccess
 {
+    //AutoAdded by Add-Migration command - Pratik Chaudhari
     [DbContext(typeof(SportAccessContext))]
     partial class SportAccessContextModelSnapshot : ModelSnapshot
     {
